@@ -11,7 +11,7 @@ type User = {
   avatar_url: string;
 }
 
-type SignInData = {
+type SignInData = { 
   login: string;
   password: string;
 }
