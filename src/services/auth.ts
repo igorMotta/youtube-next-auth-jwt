@@ -1,7 +1,7 @@
 import { v4 as uuid } from 'uuid'
 
 type SignInRequestData = {
-  email: string;
+  login: string;
   password: string;
 }
 
@@ -14,7 +14,7 @@ export async function signInRequest(data: SignInRequestData) {
     token: uuid(),
     user: {
       name: 'Diego Fernandes',
-      email: 'diego@rocketseat.com.br',
+      login: 'IgorMota',
       avatar_url: 'https://github.com/diego3g.png'
     }
   }
@@ -26,7 +26,7 @@ export async function recoverUserInformation() {
   return {
     user: {
       name: 'Diego Fernandes',
-      email: 'diego@rocketseat.com.br',
+      login: 'DiegoFernandes',
       avatar_url: 'https://github.com/diego3g.png'
     }
   }

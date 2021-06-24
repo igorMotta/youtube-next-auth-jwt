@@ -7,12 +7,12 @@ import { api } from "../services/api";
 
 type User = {
   name: string;
-  email: string;
+  login: string;
   avatar_url: string;
 }
 
 type SignInData = {
-  email: string;
+  login: string;
   password: string;
 }
 
@@ -39,9 +39,9 @@ export function AuthProvider({ children }) {
     }
   }, [])
 
-  async function signIn({ email, password }: SignInData) {
+  async function signIn({ login, password }: SignInData) {
     const { token, user } = await signInRequest({
-      email,
+      login,
       password,
     })
 
